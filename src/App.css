@@ -1,0 +1,50 @@
+#root{
+    width: 100%;
+    max-width: 1350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+}
+
+img{
+    width: 250px;
+    height: 200px;
+}
+
+.App{
+    width: 50%;
+    height: 100vh;
+    margin: auto;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    background-color: brown;
+}
+
+@media (max-width: 600px){
+    .App{
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+.Apis{
+    width: 50%;
+    height: 100vh;
+    margin: auto;
+    display: grid;
+    place-content: center; 
+    justify-items: center;
+    background-color: azure;
+}
+
+@media (max-width: 600px){
+    .Apis{
+        width: 100%;
+        font-size: 13px;
+    }
+
+}
