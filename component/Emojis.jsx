@@ -36,3 +36,5 @@ const Emojis = () => {
 };
 
 export default Emojis;
+
+//Link de la API: https://github.com/abourtnik/emojis-world
