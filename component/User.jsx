@@ -9,9 +9,14 @@ const User = () => {
     useEffect(() => {
         axios.get('https://randomuser.me/api/')
         .then((res) => setUser(res.data));
-    }, [])
+    }, []) //arreglo de dependencia
 
-    console.log(user);
+    //crear la funcion del click
+    const nextUser = () =>{
+        axios.get('https://randomuser.me/api/')
+        .then((res) => setUser(res.data));
+    }
+
     //Usar optional chaining
     return (
         <>
@@ -22,6 +27,7 @@ const User = () => {
                 <img src={user.results?.[0].picture.large} alt="" />
                 {/*Optional Chaining el usar el ? para evitar un error cuando cargue la pagina*/}
                 <p><b>{user.results?.[0].email}</b></p>
+                <button onClick={nextUser}><i className="fa-solid fa-shuffle"></i></button>
             </div>
         </>
     );
